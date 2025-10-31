@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "test":"echo \"Error no test specified\" && exit 1",
-    "lint":"eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix":"eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "format":"prettier --write ."
+    "start": "node src/server.js",
+    "test": "echo \"Error no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "express": "^4.21.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.13.2",
+    "socialapp": "file:..",
     "stream-chat": "^8.60.0",
     "zustand": "^5.0.8"
   },
