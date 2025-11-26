@@ -31,6 +31,8 @@ const App = () => {
 
   if (isLoading) return <PageLoader />;
 
+  let a='unused variable here'
+
   return (
     <div className="min-h-screen" data-theme={theme}>
       <Routes>
