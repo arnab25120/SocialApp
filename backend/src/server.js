@@ -18,7 +18,7 @@ const __dirname=path.resolve();
 
 app.use(
     cors({
-        origin:"http://localhost:5173",
+        origin:["http://localhost:5173","https://social-app-liard-nine.vercel.app/login"],
         credentials:true //allow frontend to send cookies
     })
 )
