@@ -1,196 +1,76 @@
-🚀 Xstream – Real-Time Language Exchange Platform
+<h1 align="center">🚀 Xstream</h1>
 
-Xstream is a full-stack real-time messaging and video calling platform built using the MERN stack and Stream API, designed to help users learn new languages by communicating directly with native speakers.
-The platform focuses on authentic conversation practice, low-latency communication, and a community-driven user experience.
+<p align="center">
+  <b>A Real-Time Language Exchange Platform</b><br/>
+  Connect with native speakers through real-time chat and video calls
+</p>
 
-✨ Key Features
+<p align="center">
+  <img src="https://img.shields.io/badge/MERN-Stack-blue" />
+  <img src="https://img.shields.io/badge/Stream-API-purple" />
+  <img src="https://img.shields.io/badge/Real--Time-Chat-green" />
+  <img src="https://img.shields.io/badge/Video-Calling-orange" />
+  <img src="https://img.shields.io/badge/JWT-Authentication-red" />
+</p>
 
-🔐 Secure Authentication
+---
 
-JWT-based authentication with HTTP-only cookies
+## 🌍 About the Project
 
-Protected routes and role-based access control
+**Xstream** is a full-stack **real-time messaging and video calling platform** designed to help users learn new languages by communicating directly with **native speakers**.
 
-💬 Real-Time Messaging
+The platform emphasizes **authentic conversation practice**, low-latency communication, and a **community-driven experience**, making language learning more natural and engaging.
 
-One-to-one and group conversations
+---
 
-Typing indicators & read receipts
+## ✨ Key Features
 
-Message reactions
+- 🔐 **Secure Authentication**
+  - JWT-based authentication using HTTP-only cookies
+  - Protected routes and role-based access control
 
-Online/offline presence status
+- 💬 **Real-Time Messaging**
+  - One-to-one and group conversations
+  - Typing indicators & online presence
+  - Message reactions
+  - Persistent chat history
 
-📹 Video Calling
+- 📹 **Video Calling**
+  - Real-time video calls for language practice
+  - Optimized for conversational learning
 
-High-quality real-time video calls
+- 🧑‍🤝‍🧑 **User Profiles**
+  - Persistent profiles with avatars
+  - Conversation continuity across devices
 
-Designed for conversational language practice
+- 🌐 **Community-Oriented Design**
+  - Learn directly from native speakers
+  - Encourage real-world conversation practice
 
-🌍 Language Learning Focus
+---
 
-Connect with native speakers
+## 🛠 Tech Stack
 
-Practice real-world conversations
+| Layer | Technologies |
+|------|-------------|
+| Frontend | React.js, Context API, TanStack Query |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| Real-Time | Stream API |
+| Styling | Tailwind CSS |
+| Authentication | JWT, HTTP-only Cookies |
 
-Community-oriented interaction model
+---
 
-🧑‍🤝‍🧑 User Profiles
+## 🏗 Architecture Overview
 
-Persistent profiles with avatars
-
-Conversation history across devices
-
-🛠️ Tech Stack
-Frontend
-
-React.js
-
-React Context API – global state management
-
-TanStack Query (React Query) – server-state caching, background refetching & optimistic UI updates
-
-Tailwind CSS – responsive and modern UI
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB + Mongoose
-
-Real-Time Services
-
-Stream API
-
-Real-time chat
-
-Presence tracking
-
-Typing indicators
-
-Message reactions
-
-Authentication & Security
-
-JWT (JSON Web Tokens)
-
-HTTP-only cookies
-
-Role-based permissions
-
-Secure protected API routes
-
-🧩 System Architecture (High-Level)
-Frontend (React)
-   ↓  REST + WebSocket
-Backend (Express + Node)
-   ↓
-MongoDB (User & Conversation Data)
-   ↓
-Stream API (Real-Time Messaging & Presence)
-
-
-Stream API handles real-time communication
-
-MongoDB stores persistent user and profile data
-
-JWT cookies ensure secure authentication across sessions
-
-🔐 Authentication Flow
-
-User signs up / logs in
-
-Backend issues a JWT stored in an HTTP-only cookie
-
-Protected routes verify JWT on each request
-
-User session persists across refreshes and devices
-
-⚙️ Environment Variables
-
-Create a .env file in the backend directory:
-
-PORT=5001
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET_KEY=your_jwt_secret
-STREAM_API_KEY=your_stream_api_key
-STREAM_API_SECRET=your_stream_api_secret
-NODE_ENV=development
-
-▶️ Getting Started (Local Setup)
-1️⃣ Clone the repository
-git clone https://github.com/your-username/xstream.git
-cd xstream
-
-2️⃣ Install dependencies
-
-Backend
-
-cd backend
-npm install
-
-
-Frontend
-
-cd frontend
-npm install
-
-3️⃣ Run the application
-
-Backend
-
-npm run dev
-
-
-Frontend
-
-npm run dev
-
-
-App runs on:
-
-Frontend → http://localhost:5173
-
-Backend → http://localhost:5001
-
-🧪 Error Handling & Edge Cases
-
-Invalid JWT → automatic logout
-
-Unauthorized API access → 401 Unauthorized
-
-Network failures handled via React Query retries
-
-Fallback avatars for missing profile images
-
-📈 Future Improvements
-
-🌐 Language matching & recommendation system
-
-🧠 AI-assisted conversation feedback
-
-📊 User analytics & learning progress tracking
-
-🔔 Push notifications
-
-📱 Mobile-first PWA support
-
-🧠 Key Learnings
-
-Building event-driven real-time systems
-
-Secure authentication using JWT + cookies
-
-Integrating third-party real-time APIs at scale
-
-Managing server state efficiently with TanStack Query
-
-Designing scalable MERN architectures
-
-
-👤 Author
-
-Arnab Chakraborty
-Full-Stack Developer (MERN)
+```text
+Client (React)
+   │
+   ├── REST APIs
+   │
+Backend (Node + Express)
+   │
+   ├── MongoDB (Users, Profiles, Metadata)
+   │
+   └── Stream API (Chat, Presence, Reactions)
